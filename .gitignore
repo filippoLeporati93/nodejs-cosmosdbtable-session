@@ -1,0 +1,11 @@
+node_modules
+package-lock.json
+.nyc_output
+coverage
+docs/
+__pycache__
+.coverage
+build
+.vscode
+__azurite_db_table__.json
+.DS_Store

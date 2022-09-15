@@ -1,0 +1,7 @@
+title: |-
+    # [Azure Cosmos DB Table Session](https://github.com/googleapis/nodejs-firestore-session)
+introduction: |-
+    > An [express](http://expressjs.com/) session store backed by [Azure Cosmos DB Table][product-docs].
+
+    **nodejs-cosmosdbtable-session** is an [express](http://expressjs.com/)
+    session store backed by [Azure Cosmos DB Table][product-docs].
