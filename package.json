@@ -1,5 +1,5 @@
 {
-  "name": "nodeks-cosmosdbtable-session",
+  "name": "nodejs-cosmosdbtable-session",
   "description": "Azure Cosmos DB Table session store for Express/Connect",
   "version": "1.0.0",
   "author": "Filippo Leporati",
