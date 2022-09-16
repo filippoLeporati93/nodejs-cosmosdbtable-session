@@ -99,22 +99,22 @@ export class CosmosDbTableStore extends Store {
   length = (callback: (err: any, length: number) => void) => {
     callback = callback || (() => {});
 
-    this._getEntities()
-      .then(entities => callback(null, entities.length))
+    this.tableClient
+      .createTable()
+      .then(() => {
+        this._getEntities()
+          .then(entities => callback(null, entities.length))
+          .catch(err => callback(err as Error, 0));
+      })
       .catch(err => callback(err as Error, 0));
   };
 
-  all(
-    callback: (
-      err: any,
-      obj?: SessionData[] | {[sid: string]: SessionData} | null
-    ) => void
-  ) {
+  all(callback: (err: any, obj?: SessionData[]) => void) {
     callback = callback || (() => {});
 
     this._getEntities()
       .then(entities => callback(null, entities))
-      .catch(err => callback(err as Error, null));
+      .catch(err => callback(err as Error, []));
   }
 
   private _getEntities = async (query?: TableEntityQueryOptions) => {
