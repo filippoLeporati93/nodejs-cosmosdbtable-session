@@ -43,7 +43,6 @@ export class CosmosDbTableStore extends Store {
             return callback(null, onFulfilledValue[0]);
           })
           .catch(err => {
-            console.error(err);
             callback(err as Error);
           });
       })
